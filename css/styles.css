@@ -655,7 +655,6 @@ img{
 
 .footer{
     background-color: var(--primary-dark-color);
-    
     display: flex;
     justify-content: center;
     
@@ -667,7 +666,6 @@ img{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    
 }
     
 .footer-paragraph {
@@ -996,6 +994,8 @@ img{
 
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    justify-content: center;
 }
 
 .is-hidden {
@@ -1006,7 +1006,6 @@ img{
 
 .modal{
     position: absolute;
-    width: 408px;
     padding: 72px 24px 24px 24px;
     min-height: 584px;
     left: 50%;
@@ -1020,6 +1019,11 @@ img{
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
+}
+@media screen and (min-width:320px) {
+    .modal{
+        width: 300px;
+    }
 }
 
 .modal-btn{
@@ -1282,6 +1286,9 @@ img{
         display: flex;
         justify-content: center;
     }
+        .modal{
+            width: 408px;
+        }
 }
 
 @media screen and (min-width:768px) {
@@ -1605,17 +1612,25 @@ img{
 
 
 .footer{
+    justify-content: center;
 }
 
   .footerino{
+    max-width: 1158px;
     padding: 100px 15px 100px 15px;
     align-items: baseline;
     flex-wrap: nowrap;
-    flex-direction: row;
+  }
+
+  .footer-paragraph{
+    min-width: unset;
+    width: 264px;
   }
     
 .footer-container{
     max-width: 264px;
+    margin-bottom: 0;
+    margin-right: 120px;
 }
 
 .logo-footer{
@@ -1623,8 +1638,9 @@ img{
 }
 
 .footer-soc{
-    margin-left: 120px;
     gap: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .footer-paragraph{
@@ -1639,4 +1655,14 @@ img{
 .footer-input{
 width: 264px;
 }
+
+.footer-form-container{
+    width: 453px;
+}
+
+
+.footer-form{
+    width: 453px;
+}
+
 }
