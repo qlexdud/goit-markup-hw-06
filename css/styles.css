@@ -173,7 +173,7 @@ img{
 
 
 
-.menu {
+.mob-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -181,11 +181,15 @@ img{
     width: 100vw;
     height: 100vh;
     top: 0;
-    z-index: 2;
+    z-index: 999;
     background-color: var(--primary-white-color);
-    padding-left: 40px;
-    padding-top: 24px;
-    padding-bottom: 40px;
+    padding: 80px 35px 40px 40px;
+    transform:translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.mob-menu.is-open{
+    transform: translateX(0);
 }
 
 .close-mobile-btn {
