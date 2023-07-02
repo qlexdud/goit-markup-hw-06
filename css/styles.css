@@ -61,8 +61,13 @@ img{
 .header{
     display: flex;
     justify-content: center;
+    padding: 24px 16px;
     border-bottom: solid 1px #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container{
+    width: 100%;
 }
 
 .header-menu {
@@ -70,6 +75,7 @@ img{
     gap: 40px;
     align-items: center;
 }
+
 
 .header-navigation {
     display: flex;
@@ -92,7 +98,7 @@ img{
 .header-container {
     display: flex;
     align-items: center;
-    padding: 22.5px 16px;
+    padding: 0 16px;
 }
 .header-menu-item{
     padding-top: 24px;
@@ -175,27 +181,37 @@ img{
 
 .mob-menu {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
-    z-index: 999;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
     background-color: var(--primary-white-color);
-    padding: 80px 35px 40px 40px;
+    z-index: 999;
     transform:translateX(100%);
     transition: transform 250ms ease-in-out;
 }
 
-.mob-menu.is-open{
+.mob-menu.is-open {
     transform: translateX(0);
 }
 
+.mob-menu-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-white-color);
+    box-shadow: none;
+}
+
+
+
 .close-mobile-btn {
     position: absolute;
-    right: 24px;
-    top: 24px;
+    top: -24px;
+    right: -24px;
+    padding: 24px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -319,7 +335,7 @@ img{
 .mobile-icon-list {
     display: flex;
     margin: 0 auto;
-    gap: 56px;
+    gap: 25px;
 }
 
 .mobile-list-item {
@@ -373,7 +389,6 @@ img{
 }
 
 .container-hero{
-    margin: 0 auto;
     padding-bottom: 112px;
     padding-top: 112px;
     
@@ -595,6 +610,9 @@ img{
 
 
 .customers-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding-top: 96px;
     padding-bottom: 96px;
 }
@@ -617,7 +635,7 @@ img{
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
-    gap: 72px 16px;
+    gap: 72px 6px;
     width: 100%;
 }
 
@@ -644,7 +662,7 @@ img{
 }
 
 .customers-container-item{
-    max-width: 190px;
+    max-width: 158px;
     width: 100%;
     height: 88px;
 }
@@ -1284,15 +1302,97 @@ img{
 }
 
 
-@media screen and (min-width:428px) {
-    .container{max-width:428px;}
-    section{
+
+
+@media screen and (min-width:320px) {
+
+
+
+
+
+
+    .mob-menu {
+        padding: 40px 40px;
         display: flex;
         justify-content: center;
     }
-        .modal{
-            width: 408px;
-        }
+
+    .mob-menu-container {
+        padding: 0;
+        max-width: 240px;
+        background-color: var(--primary-white-color);
+    }
+
+
+
+    
+    .hero-title{
+        text-align: center;
+    }
+
+.customers-container-list{
+    
+
+}
+
+.customers-container-item{
+   
+}
+
+    .customers-link{
+
+        
+    }
+}
+
+
+
+
+
+@media screen and (min-width:428px) {
+.container{max-width:428px;}
+section{
+    display: flex;
+    justify-content: center;
+}
+.modal{
+    width: 408px;
+}
+.mobile-icon-list{
+    gap: 56px;
+    
+}
+
+.mob-menu {
+    
+    display: flex;
+    justify-content: center;
+    padding: 80px 35px 40px 40px;
+}
+
+.mob-menu-container{
+    max-width: 353px;
+    
+}
+
+.close-mobile-btn{
+    top: -66px;
+    right: -24px;
+}
+
+
+
+.customers-container-item {
+    max-width: 168px;
+    width: 100%;
+
+}
+
+.customers-container-list{
+    gap: 72px 24px;
+}
+
+
 }
 
 @media screen and (min-width:768px) {
@@ -1301,11 +1401,15 @@ img{
 
     }
 
+
+.header{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
     .header-container{
         display: flex;
         justify-content: space-between;
-        padding-top: 0;
-        padding-bottom: 0;
         gap: 120px;
     }
 
@@ -1335,6 +1439,7 @@ img{
 
     .header-menu-contacts{
         display: flex;
+        flex-direction: column;
         gap: 12px;
         flex-wrap: wrap;
     }
@@ -1382,21 +1487,33 @@ img{
         
     }
 
-    
+   
     .team-menu-item{
         width: unset;
         width:((100%-24px) /2);
     }
 
-
+ .customers-container-list {
+     gap: 24px;
+ }
 
     .customers-container-item{
-        width: var((100%-48px) /3);
-        
+        width: calc((100%-48px) /3);
+     
     }
 
-    .customers-link{
+    .customers-container{
+        padding: 0;
+        max-width: 552px;
+        
     }
+    .customers{
+        padding: 96px 0;
+    }
+.customers-container-list{
+
+}
+
     
    .hero-title{
     line-height: 1.07;
@@ -1412,6 +1529,7 @@ img{
     padding-left: 108px;
     padding-right: 0;
     justify-content: unset;
+    align-items: baseline;
    }
 
    .logo-footer{
@@ -1424,6 +1542,7 @@ img{
 
    .footer-soc{
     margin-left: 24px;
+    gap: 0;
    }
 
    .footer-icon-list{
@@ -1456,7 +1575,7 @@ img{
 
 @media screen and (min-width:1158px) {
     .container{
-        max-width: 1440px;
+        max-width: 1158px;
         
     }
 
@@ -1495,6 +1614,7 @@ img{
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    flex-direction: initial;
 }
 
 .header-contacts-item {
@@ -1505,6 +1625,7 @@ img{
 }
 
 .header-contacts{
+    
 }
 
 .btn-charm-header {
@@ -1518,7 +1639,15 @@ img{
     padding: 188px 0;
 }
 
+.hero-title{
+    margin: 0 auto 48px auto;
+}
 
+
+
+.feature{
+    padding: 120px 15px 0 15px;
+}
 
 .feature-menu {
     display: flex;
@@ -1529,9 +1658,9 @@ img{
 .feature-menu-item {
     max-width: 264px;
 }
+
 .feature-container{
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 }
     
 .feature-container-icon {
@@ -1552,19 +1681,22 @@ img{
     letter-spacing: 0.4px;
 }
 
-
+.feature-item-paragraph{
+    font-weight: 400;
+}
 
 
 
 
 .referral{
     display: flex;
+    padding: 120px 15px 120px 15px;
     
 }
 
 .referral-container{
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 0;
+    
 }
 
 .referral-menu{
@@ -1588,14 +1720,26 @@ img{
 
 
 
+.team{
+    padding:96px 15px 96px 15px;
+}
+
+.team-section-container{
+    padding: 0;
+}
+
+
+
+
 
 
 .customers{
+    padding: 120px 15px 120px 15px;
+
 }
 
 .customers-container{
-    max-width: 1158px;
-    margin: 0 auto;
+    padding: 0;
 }
 
 .customers-container-list{
@@ -1617,12 +1761,11 @@ img{
 
 .footer{
     justify-content: center;
+    padding: 100px 0;
 }
 
   .footerino{
-    max-width: 1158px;
-    padding: 100px 15px 100px 15px;
-    align-items: baseline;
+    padding: 0 15px;
     flex-wrap: nowrap;
   }
 
