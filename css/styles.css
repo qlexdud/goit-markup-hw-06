@@ -874,15 +874,19 @@ img{
 }
 
 .portfolio{
-    padding-top: 96px;
-    padding-bottom: 120px;
+    padding: 48px 16px 48px 16px;
 }
+
+.portfolio-container{
+    padding: 0;
+}
+
 .portfolio-menu-button{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 48px;
+    max-width: 280px;
     
 }
 .portfolio-button {
@@ -895,7 +899,7 @@ img{
     background-color: var(--secondary-white-color);
     cursor: pointer;
     border: 1px solid #E7E9FC;
-    padding: 12px 24px;
+    padding: 8px 16px;
     border-radius: 4px;
     transition-property: color, background-color, border-color, box-shadow;
     transition-duration: 250ms;
@@ -916,7 +920,8 @@ img{
 }
 
 .portfolio-feature-items{
-    width: calc((100% - 48px) / 3); 
+    max-width: unset;
+    /* width: calc((100% - 48px) / 3);  */
 }
 
 .portfolio-feature-link:hover {
@@ -980,10 +985,15 @@ img{
 .portfolio-menu-feature{
     display: flex;
     flex-wrap: wrap;
-    column-gap:24px;
-    row-gap: 48px;
+    justify-content: center;
+    /* column-gap:24px;
+    row-gap: 48px; */
+    gap: 48px;
 }
 
+.portfolio-feature-image{
+
+}
 
 .portfolio-feature-title {
     color: var(--primary-dark-color);
@@ -1308,41 +1318,26 @@ img{
 
 
 
+.mob-menu {
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center;
+}
 
-
-
-    .mob-menu {
-        padding: 40px 40px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .mob-menu-container {
-        padding: 0;
-        max-width: 240px;
-        background-color: var(--primary-white-color);
-    }
+.mob-menu-container {
+    padding: 0;
+    max-width: 240px;
+    background-color: var(--primary-white-color);
+}
 
 
 
     
-    .hero-title{
-        text-align: center;
-    }
-
-.customers-container-list{
-    
-
+.hero-title{
+    text-align: center;
 }
 
-.customers-container-item{
-   
-}
 
-    .customers-link{
-
-        
-    }
 }
 
 
@@ -1408,6 +1403,7 @@ section{
 }
 
     .header-container{
+        padding: 0;
         display: flex;
         justify-content: space-between;
         gap: 120px;
@@ -1570,6 +1566,33 @@ section{
    .footer-input{
     
    }
+   
+.portfolio{
+    padding-top: 64px;
+    padding-bottom: 96px;
+}
+
+.portfolio-container{
+    max-width: 736px;
+}
+
+.portfolio-menu-button{
+    gap: 24px;
+    max-width: unset;
+    justify-content: center;
+}
+
+.portfolio-button{
+    padding: 12px 24px;
+}
+
+.portfolio-feature-items{
+    width: calc((100% - 16px) / 2);
+}
+
+.portfolio-menu-feature{
+    gap: 72px 16px;
+}
 
 }
 
@@ -1810,6 +1833,24 @@ width: 264px;
 
 .footer-form{
     width: 453px;
+}
+
+
+
+.portfolio{
+    padding: 100px 15px 120px 15px;
+}
+
+.portfolio-menu-button{
+    margin-bottom: 72px;
+}
+
+.portfolio-feature-items {
+    width: calc((100% - 48px) / 3); 
+}
+
+.portfolio-menu-feature{
+    gap: 48px 24px;
 }
 
 }
