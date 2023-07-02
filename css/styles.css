@@ -355,11 +355,11 @@ img{
 }
 
 .mobile-link-soc:hover {
-    background-color: #31d0aa;
+    background-color: var(--secondary-blu-color);
 }
 
 .mobile-link-soc:focus {
-    background-color: #31d0aa;
+    background-color: var(--secondary-blu-color);
 }
 
 .mobile-menu-icon {
