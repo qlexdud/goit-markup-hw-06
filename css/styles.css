@@ -32,7 +32,8 @@ img{
 .container{
     width: 100%;
     max-width: 1158px;
-    padding: 0 15px;
+    padding: 0 16px;
+    margin: 0 auto;
 
 }
 .link{
@@ -61,7 +62,7 @@ img{
 .header{
     display: flex;
     justify-content: center;
-    padding: 24px 16px;
+    padding: 0;
     border-bottom: solid 1px #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -378,7 +379,8 @@ img{
     justify-content: center;
     /* padding-bottom: 188px;
     padding-top: 188px; */
-    
+    padding-bottom: 112px;
+    padding-top: 112px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -389,8 +391,7 @@ img{
 }
 
 .container-hero{
-    padding-bottom: 112px;
-    padding-top: 112px;
+    
     
 
 }
@@ -454,11 +455,10 @@ img{
 
 
 .feature{
-
+    padding: 96px 0;
 }
 
 .feature-container{
-    padding: 96px 15px;
 }
 
 .feature-menu{
@@ -507,12 +507,11 @@ img{
 
 .team{
     background-color: var(--secondary-white-color);
-    
+    padding: 96px 0;
 }
 
 .team-section-container{
-    padding-top: 96px;
-    padding-bottom: 96px;
+    
 }
 
 .team-menu{
@@ -608,13 +607,15 @@ img{
 
 
 
+.customers{
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
 
 .customers-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 96px;
-    padding-bottom: 96px;
 }
 
 .customers-title{
@@ -635,7 +636,7 @@ img{
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
-    gap: 72px 6px;
+    gap: 72px 24px;
     width: 100%;
 }
 
@@ -662,8 +663,7 @@ img{
 }
 
 .customers-container-item{
-    max-width: 158px;
-    width: 100%;
+    width: calc((100% - 24px) /2);
     height: 88px;
 }
 
@@ -679,11 +679,12 @@ img{
     background-color: var(--primary-dark-color);
     display: flex;
     justify-content: center;
-    
+    padding: 97.5px 0 96px 0;
+
 }
 
 .footerino{
-    padding: 97.5px 15px 96px 15px;
+    padding: 0 15px;
     display:flex;
     flex-wrap: wrap;
     align-items: center;
@@ -874,11 +875,11 @@ img{
 }
 
 .portfolio{
-    padding: 48px 16px 48px 16px;
+    padding: 48px 0;
 }
 
 .portfolio-container{
-    padding: 0;
+    padding: 0 16px;
 }
 
 .portfolio-menu-button{
@@ -1345,7 +1346,10 @@ img{
 
 
 @media screen and (min-width:428px) {
-.container{max-width:428px;}
+.container{
+    padding: 0 16px;
+    max-width:428px;
+}
 section{
     display: flex;
     justify-content: center;
@@ -1393,7 +1397,7 @@ section{
 @media screen and (min-width:768px) {
     .container {
         max-width: 768px;
-
+        padding: 0 16px;
     }
 
 
@@ -1403,7 +1407,6 @@ section{
 }
 
     .header-container{
-        padding: 0;
         display: flex;
         justify-content: space-between;
         gap: 120px;
@@ -1450,9 +1453,10 @@ section{
     }
 
 
-
+.feature{
+    padding: 96px 0;
+}
     .feature-container{
-        padding: 96px 16px;
     }
 
     .feature-menu{
@@ -1499,12 +1503,9 @@ section{
     }
 
     .customers-container{
-        padding: 0;
-        max-width: 552px;
         
     }
     .customers{
-        padding: 96px 0;
     }
 .customers-container-list{
 
@@ -1523,7 +1524,6 @@ section{
 
    .footerino{
     padding-left: 108px;
-    padding-right: 0;
     justify-content: unset;
     align-items: baseline;
    }
@@ -1599,7 +1599,7 @@ section{
 @media screen and (min-width:1158px) {
     .container{
         max-width: 1158px;
-        
+        padding: 0 15px;
     }
 
     .menu{
@@ -1669,7 +1669,7 @@ section{
 
 
 .feature{
-    padding: 120px 15px 0 15px;
+    padding: 120px 0 0 0;
 }
 
 .feature-menu {
@@ -1683,7 +1683,6 @@ section{
 }
 
 .feature-container{
-    padding: 0;
 }
     
 .feature-container-icon {
@@ -1713,12 +1712,11 @@ section{
 
 .referral{
     display: flex;
-    padding: 120px 15px 120px 15px;
+    padding: 120px 0;
     
 }
 
 .referral-container{
-    padding: 0;
     
 }
 
@@ -1744,11 +1742,10 @@ section{
 
 
 .team{
-    padding:96px 15px 96px 15px;
+    padding: 96px 0;
 }
 
 .team-section-container{
-    padding: 0;
 }
 
 
@@ -1757,12 +1754,11 @@ section{
 
 
 .customers{
-    padding: 120px 15px 120px 15px;
+    padding: 120px 0;
 
 }
 
 .customers-container{
-    padding: 0;
 }
 
 .customers-container-list{
@@ -1838,7 +1834,7 @@ width: 264px;
 
 
 .portfolio{
-    padding: 100px 15px 120px 15px;
+    padding: 100px 0;
 }
 
 .portfolio-menu-button{
