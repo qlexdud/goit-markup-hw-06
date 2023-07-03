@@ -62,7 +62,7 @@ img{
 .header{
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 24px 0;
     border-bottom: solid 1px #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -468,7 +468,6 @@ img{
 }
 
 .feature-menu-item{
-    max-width: 356px;
 }
 
 .feature-container-icon{
@@ -1658,7 +1657,7 @@ section{
 
 
 
-.container-hero{
+.hero{
     padding: 188px 0;
 }
 
